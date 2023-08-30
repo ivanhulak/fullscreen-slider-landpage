@@ -1,0 +1,39 @@
+.slider-controlls {
+   &__arrows {
+      margin-bottom: 14px;
+      opacity: 0.3;
+   }
+
+   &__count {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-left: 16px;
+      column-gap: 6px;
+   }
+}
+
+.count-btn {
+   color: #FFF;
+   font-weight: 600;
+
+   &__current, .swiper-pagination-current{
+      font-size: 32px;
+   }
+
+   &__total, .swiper-pagination-total{
+      position: relative;
+      font-size: 18px;
+      padding-left: 13px;
+      color: rgba(255, 255, 255, 0.3);
+
+      &:before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+      }
+   }
+}

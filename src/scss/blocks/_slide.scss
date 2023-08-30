@@ -1,0 +1,137 @@
+.slide {
+   height: 100vh;
+   overflow: hidden;
+   padding-top: 24vh;
+   padding-bottom: 80px;
+
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+
+   &--norway {
+      @include bg_img('../img/slider-bg/01.jpg');
+   }
+
+   &--austria {
+      @include bg_img('../img/slider-bg/02.jpg');
+   }
+
+   &--uae {
+      @include bg_img('../img/slider-bg/03.jpg');
+   }
+
+   &--thailand {
+      @include bg_img('../img/slider-bg/04.jpg');
+   }
+
+   &--marocco {
+      @include bg_img('../img/slider-bg/05.jpg');
+   }
+
+   cursor: grab;
+
+   &:active {
+      cursor: grabbing;
+   }
+
+   @media (max-width: 1200px) {
+      padding-bottom: 60px;
+   }
+
+   @media (max-width: 767px) {
+      justify-content: flex-end;
+      row-gap: 30px;
+      padding-top: 100px;
+   }
+
+   @media (max-width: 767px) and (max-height: 500px) {
+      row-gap: 0px;
+   }
+
+   &__header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 26vh;
+
+      @media (max-width: 767px) {
+         margin-bottom: 10vh;
+      }
+
+      @media (max-height: 472px) {
+         margin-bottom: 16vh;
+      }
+   }
+
+   &__title {
+      display: inline-block;
+      padding: 0px 10px;
+      font-size: 13vw;
+      font-weight: 700;
+      line-height: 1.22;
+
+      @include bg_gradient(rgb(0, 0, 0));
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+
+      &--norway {
+         @include bg_gradient(rgb(57, 70, 109));
+      }
+
+      &--austria {
+         @include bg_gradient(rgb(99, 99, 99));
+      }
+
+      &--uae {
+         @include bg_gradient(rgb(144, 77, 0));
+      }
+
+      &--thailand {
+         @include bg_gradient(rgb(71, 111, 139));
+      }
+
+      &--marocco {
+         @include bg_gradient(rgb(216, 215, 214));
+      }
+   }
+
+   &__tagline {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.56vw;
+      font-weight: 500;
+      line-height: 1.23;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+
+      @media (max-width: 767px) {
+         font-size: 3vw;
+      }
+   }
+
+   @media (max-width: 767px) {
+      font-size: 19vw;
+   }
+
+   &__locations {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 30px;
+      width: 70%;
+      margin: 0 auto;
+
+      @media (max-width: 1023px) {
+         width: 90%;
+      }
+
+      @media (max-width: 767px) and (min-height: 650px) {
+         width: 90%;
+         flex-direction: column;
+         row-gap: 20px;
+      }
+
+   }
+}
